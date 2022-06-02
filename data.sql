@@ -38,3 +38,120 @@ VALUES('Blossom','1998-10-13',3,true,17);
 INSERT INTO animals 
 (name,date_of_birth,escape_attempts,neutered,weight_kg) 
 VALUES('Ditto','2022-05-14',4,true,22);
+
+/*Inserting Data into Owners and Species Tables*/
+
+INSERT INTO owners (full_name, age)
+VALUES ('Sam Smith', 34),
+('Jennifer Orwell', 19),
+ ('Bob', 45),
+('Melody Pond', 77),
+ ('Dean Winchester', 14),
+('Jodie Whittaker', 38);
+
+INSERT INTO species (NAME)
+VALUES ('Pokemon'),
+ ('Digimon');
+
+ /*updating animals data*/
+ BEGIN;
+
+UPDATE animals
+SET species_id = CASE
+    WHEN NAME LIKE '%mon'
+    THEN (
+      SELECT id
+      FROM species
+      WHERE NAME = 'Digimon'
+    )
+    ELSE (
+      SELECT id
+      FROM species
+      WHERE NAME = 'Pokemon'
+    )
+  END;
+  
+  SELECT *
+FROM animals;
+COMMIT;
+
+
+BEGIN;
+
+UPDATE animals
+SET owner_id = CASE
+    WHEN NAME = 'Agumon'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Sam Smith'
+    )
+    WHEN NAME = 'Gabumon'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Jennifer Orwell'
+    )
+    WHEN NAME = 'Pikachu'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Jennifer Orwell'
+    )
+    WHEN NAME = 'Devimon'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Bob'
+    )
+    WHEN NAME = 'Plantmon'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Bob'
+    )
+    WHEN NAME = 'Charmander'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Melody Pond'
+    )
+    WHEN NAME = 'Squirtle'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Melody Pond'
+    )
+    WHEN NAME = 'Blossom'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Melody Pond'
+    )
+    WHEN NAME = 'Angemon'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE
+        full_name = 'Dean Winchester'
+    )
+    WHEN NAME = 'Boarmon'
+    THEN (
+      SELECT id
+      FROM owners
+      WHERE full_name = 'Dean Winchester'
+    )
+  END;
+
+SELECT *
+FROM animals;
+
+COMMIT;
