@@ -71,8 +71,7 @@ SET species_id = CASE
     )
   END;
   
-  SELECT *
-FROM animals;
+SELECT * FROM animals;
 COMMIT;
 
 
@@ -151,7 +150,6 @@ SET owner_id = CASE
     )
   END;
 
-SELECT *
-FROM animals;
+SELECT * FROM animals;
 
 COMMIT;
