@@ -57,7 +57,7 @@ SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
 
-/*answering the Questions 3rd Milstone*/
+/*3rd Milstone: answering the Questions */
 
 SELECT * FROM animals
 JOIN owners ON owner_id = owners.id
@@ -91,7 +91,7 @@ GROUP BY owners.full_name
 ORDER BY count(animals.*) DESC
 LIMIT 1;
 
-/*answering the questions 4th Milstone*/
+/*4th Milstone: answering the questions */
 SELECT
     animals.name AS animal,
     visits.date_of_visit
