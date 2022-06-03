@@ -90,3 +90,4 @@ JOIN owners ON animals.owner_id = owners.id
 GROUP BY owners.full_name
 ORDER BY count(animals.*) DESC
 LIMIT 1;
+

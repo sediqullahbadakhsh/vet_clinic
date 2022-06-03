@@ -53,3 +53,29 @@ ADD
   ON
 DELETE CASCADE;
 
+/*Creating vets, Specializations and Visits Tables*/
+
+CREATE TABLE vets(
+  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	name varchar(250),
+	age int,
+	date_of_graduation date
+);
+
+CREATE TABLE specializations(
+  vets_id int,
+  species_id int,
+  FOREIGN KEY (vets_id) REFERENCES vets (id) on DELETE RESTRICT ON UPDATE CASCADE,
+  FOREIGN KEY (species_id) REFERENCES species (id) ON DELETE RESTRICT ON UPDATE CASCADE,
+  PRIMARY KEY (species_id, vets_id)
+);
+
+CREATE TABLE visits(
+  id int GENERATED ALWAYS AS IDENTITY,
+  animals_id int,
+  vets_id int,
+  date_of_visit date,
+  FOREIGN KEY (animals_id) REFERENCES animals (id) on DELETE RESTRICT ON UPDATE CASCADE,
+  FOREIGN KEY (vets_id) REFERENCES vets (id) on DELETE RESTRICT ON UPDATE CASCADE,
+  PRIMARY KEY (id, animals_id, vets_id)
+);
