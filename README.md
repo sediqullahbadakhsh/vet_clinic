@@ -1,6 +1,6 @@
 # Vet Clinic Database
 
-> this Repo consist of all Vet Clinic Data samples, queries and schema
+> this Repo consist of all Vet Clinic Data samples, queries and schema files
 
 ## Getting Started
 
