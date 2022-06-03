@@ -154,7 +154,7 @@ SELECT * FROM animals;
 
 COMMIT;
 
-/*Add data into Vets table*/
+/*Add data into Vets*/
 INSERT INTO vets
     VALUES 
 		(DEFAULT, 'William Tatcher', 45, '2000-04-23'),
@@ -162,14 +162,14 @@ INSERT INTO vets
 		(DEFAULT, 'Stephanie Mendez', 64, '1981-05-04'),
 		(DEFAULT, 'Jack Harkness', 38, '2008-06-08');
 
-/*Add data into specialties table*/
+/*Add data into specialties*/
 INSERT INTO specializations
     VALUES 
 		(1, 1),
 		(3, 1),
 		(3, 2),
 		(4, 2);
-/*Add data to visits table*/
+/*Add data to visits*/
 
 SELECT * FROM animals;
 SELECT * FROM vets;
