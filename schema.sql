@@ -53,7 +53,7 @@ ADD
   ON
 DELETE CASCADE;
 
-/*Creating vets, Specializations and Visits Tables*/
+/*Create Tables: vets, Specializations and Visits*/
 
 CREATE TABLE vets(
   id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
