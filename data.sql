@@ -153,3 +153,46 @@ SET owner_id = CASE
 SELECT * FROM animals;
 
 COMMIT;
+
+/*Add data into Vets table*/
+INSERT INTO vets
+    VALUES 
+		(DEFAULT, 'William Tatcher', 45, '2000-04-23'),
+		(DEFAULT, 'Maisy Smith', 26, '2019-01-17'),
+		(DEFAULT, 'Stephanie Mendez', 64, '1981-05-04'),
+		(DEFAULT, 'Jack Harkness', 38, '2008-06-08');
+
+/*Add data into specialties table*/
+INSERT INTO specializations
+    VALUES 
+		(1, 1),
+		(3, 1),
+		(3, 2),
+		(4, 2);
+/*Add data to visits table*/
+
+SELECT * FROM animals;
+SELECT * FROM vets;
+INSERT INTO visits
+  VALUES 
+		(DEFAULT, 1, 1, '2020-05-24'),
+		(DEFAULT, 1, 3, '2020-07-22'),
+		(DEFAULT, 2, 4, '2021-02-02'),
+		(DEFAULT, 3, 2, '2020-01-05'),
+		(DEFAULT, 3, 2, '2020-03-08'),
+		(DEFAULT, 3, 2, '2020-05-14'),
+		(DEFAULT, 4, 3, '2021-05-04'),
+		(DEFAULT, 5, 4, '2021-02-24'),
+		(DEFAULT, 6, 2, '2019-12-21'),
+		(DEFAULT, 6, 1, '2020-08-10'),
+		(DEFAULT, 6, 2, '2021-04-07'),
+		(DEFAULT, 7, 3, '2019-09-29'),
+		(DEFAULT, 8, 4, '2020-10-03'),
+		(DEFAULT, 8, 4, '2020-11-04'),
+		(DEFAULT, 9, 2, '2019-01-24'),
+		(DEFAULT, 9, 2, '2019-05-15'),
+		(DEFAULT, 9, 2, '2020-02-27'),
+		(DEFAULT, 9, 2, '2020-08-03'),
+		(DEFAULT, 10, 3, '2020-05-24'),
+		(DEFAULT, 10, 1, '2021-01-11');
+		
