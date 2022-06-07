@@ -79,3 +79,17 @@ CREATE TABLE visits(
   FOREIGN KEY (vets_id) REFERENCES vets (id) on DELETE RESTRICT ON UPDATE CASCADE,
   PRIMARY KEY (id, animals_id, vets_id)
 );
+
+
+/*5th Milstone: altering owners table*/
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+/* Creating Indexes for Visits and Owners Tables, improving performatnce*/
+Begin;
+CREATE INDEX vets_id_asc ON visits(vets_id ASC);
+commit;
+
+BEGIN;
+CREATE INDEX owners_email_asc ON owners(email ASC);
+COMMIT;
