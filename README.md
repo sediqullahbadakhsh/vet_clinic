@@ -1,7 +1,7 @@
 # Vet Clinic Database
 
 > this Repo consist of all Vet Clinic Data samples, queries and schema files
-[vets clinic diagram](./Images/Vet_Clinic-diagram.png)
+![vets clinic diagram](./Images/Vet_Clinic-diagram.png)
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
