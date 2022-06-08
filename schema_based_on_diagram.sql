@@ -57,3 +57,7 @@ CREATE INDEX invoice_id_asc ON invoice_items(invoice_id ASC);
 CREATE INDEX treatment_id_asc ON invoice_items(treatment_id ASC);
 CREATE INDEX idx_treatment_id ON hospitalizations(treatment_id);
 CREATE INDEX idx_medical_histories_id ON hospitalizations(medical_histories_id);
+
+/*Please find the Diagram from the following URL:
+ERD URL: "./Images/new Clinic database Diagram.png"
+*/
